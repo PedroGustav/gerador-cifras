@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4086791628334542"
+     crossorigin="anonymous"></script>
+        <title>Teste de Cifra</title>
+</head>
+<body>
+    <main class="container">
+        <section class="left-side">
+            <h1>Gerador de Cifra</h1>
+            <p class="desc">
+                É simples, escreva sua cifra aqui em baixo no formato<br>
+                ChordPro. e geraremos pra você logo aqui ao lado :)
+            </p>
+            <div class="row">
+                <input type="text" class="cifra-title" placeholder="Título da música">
+                <input type="text" class="cifra-author" placeholder="Autor">
+                <input type="text" class="cifra-tom" placeholder="Tom">
+            </div>
+            <textarea class="cifra_input" name="cifra" id="cifra" cols="30" rows="10" placeholder="Escreva sua cifra aqui.." ></textarea>
+            <button class="submit-cifra" id="submit-cifra">Gerar cifra</button>
+        </section>
+        <section class="right-side">
+            <div class="ads-area">
+                
+            </div>
+            <div class="loading-cifra" id="loading-cifra">
+                <div class="loader">
+                    <div class="loader-content"></div>
+                </div>
+                <span>Gerando sua cifra, aguarde...</span>
+            </div>
+            <h2 id="title" >O título da sua cifra</h2>
+            <h2 id="author">Autor</h2>
+            <strong>Tom: <b id="tom">C</b></strong>
+            <div class="row-actions-cifra" id="row-actions-cifra" >
+            <button class="actions-cifra" id="baixar-cifra-pdf">
+                <img src="./assets/icons/file-arrow-down.svg" alt="" srcset="">
+                Baixar em PDF
+            </button>
+            <button class="actions-cifra" id="copiar">
+                <img src="./assets/icons/copy.svg" alt="" srcset="">
+    
+                Copiar
+            </button>
+    
+            </div>
+            <div class="cifra" id="container-cifra" >
+            </div>
+        </section>
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+
+</html>
