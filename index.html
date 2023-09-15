@@ -15,21 +15,22 @@
 </head>
 <body>
     <main class="container">
-        <section class="left-side">
-            <h1>Gerador de Cifra</h1>
-            <p class="desc">
-                É simples, escreva sua cifra aqui em baixo no formato<br>
-                ChordPro. e geraremos pra você logo aqui ao lado :)
-            </p>
-            <div class="row">
-                <input type="text" class="cifra-title" placeholder="Título da música">
-                <input type="text" class="cifra-author" placeholder="Autor">
-                <input type="text" class="cifra-tom" placeholder="Tom">
+        <section class="generator-area">
+            <div class="left-side">
+                <h1>Gerador de Cifra</h1>
+                <p class="desc">
+                    É simples, escreva sua cifra aqui em baixo no formato<br>
+                    ChordPro. e geraremos pra você logo aqui ao lado :)
+                </p>
+                <div class="row">
+                    <input type="text" class="cifra-title" placeholder="Título da música">
+                    <input type="text" class="cifra-author" placeholder="Autor">
+                    <input type="text" class="cifra-tom" placeholder="Tom">
+                </div>
+                <textarea class="cifra_input" name="cifra" id="cifra" cols="30" rows="10" placeholder="Escreva sua cifra aqui.." ></textarea>
+                <button class="submit-cifra" id="submit-cifra">Gerar cifra</button>
             </div>
-            <textarea class="cifra_input" name="cifra" id="cifra" cols="30" rows="10" placeholder="Escreva sua cifra aqui.." ></textarea>
-            <button class="submit-cifra" id="submit-cifra">Gerar cifra</button>
-        </section>
-        <section class="right-side">
+            <div class="right-side">
             <div class="ads-area">
                 
             </div>
@@ -55,6 +56,7 @@
     
             </div>
             <div class="cifra" id="container-cifra" >
+            </div>
             </div>
         </section>
     </main>
