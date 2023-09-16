@@ -25,6 +25,9 @@
     color: #fff;
 }
 
+body{
+    overflow-x: hidden;
+}
 @media(max-width: 480px){
     html{
         font-size: 10px;
@@ -62,25 +65,34 @@
 }
 
 
-.container{
+.main{
     width: 100vw;
-    display: flex;
-    flex-direction: column;
+    height: 100%;
+    display: flex !important;
+    flex-direction: column !important;
     font-family: var(--primary-font);
-    flex-wrap: wrap;
 
 }
 
 .generator-area{
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
     display: flex;
     flex-wrap: wrap;
     
 }
-
-.left-side{
+.left-side, .right-side{
     flex: 1;
-    padding: 2rem;
+    padding: 2.5rem;
+    min-width: 300px;
+    height: 100%;
+    flex-basis: 50%; /* Duas divs por linha (quando ocorre o wrap) */
     height: 100vh;
+}
+.left-side{
     z-index: 2;
     background-color: #FFFFFF;
     box-shadow: 6px 4px 37px 5px rgba(0, 0, 0, 0.05);
@@ -89,25 +101,15 @@
     
 }
 .right-side{
-    flex: 1;
-    padding: 2rem;
-    height: 100vh;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     /* align-items:; */
     position: relative;
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
 
-@media(max-width: 991px){
-    .generator-area{
-        flex-direction: column;
-    }
-    .left-side, .right-side{
-        padding: 4rem;
-    }
-}
+
 
 .left-side h1{
     font-size: var(--fz-5);
@@ -311,7 +313,11 @@
     font-size: 0.7rem;
     
 }
-
+@media(max-width:650px){
+    .linha-letra, .linha-cifra{
+        font-size: 1rem;
+    }
+}
 .linha-letra::selection, .linha-cifra::selection{
     background-color: #25AC8C;
     color: #fff;
@@ -330,6 +336,8 @@
     /* padding: 2rem; */
     color: #25AC8C;
     white-space: pre;
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 .actions-cifra{
@@ -355,4 +363,57 @@
 .actions-cifra img{
     width: 25px;
     margin-right: 8px;
+}
+
+.other-area{
+    max-width: 100vw;
+    height: 100%;
+    padding: 2rem;
+}
+
+
+.content{
+    width: 60%;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+.content h1,.content h2{
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.content p{
+    color: var(--gray);
+    font-size: var(--fz-2);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.cipher-pro{
+    color: var(--gray);
+    font-family: var(--monospaced-font) !important;
+    display: flex;
+}
+
+.content ol{
+    margin-bottom: 1rem;
+    color: var(--gray);
+}
+
+.about-me{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F3F3F3;
+    padding: 1rem 1.5rem;
+    color: var(--gray);
+}
+
+
+.about-me a{
+    color: var(--primary);
+    font-weight: bold;
+    /* text-decoration: none; */
 }

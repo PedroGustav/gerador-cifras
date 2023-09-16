@@ -8,13 +8,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4086791628334542"
      crossorigin="anonymous"></script>
         <title>Teste de Cifra</title>
 </head>
 <body>
-    <main class="container">
+    <div class="main">
         <section class="generator-area">
             <div class="left-side">
                 <h1>Gerador de Cifra</h1>
@@ -31,9 +31,7 @@
                 <button class="submit-cifra" id="submit-cifra">Gerar cifra</button>
             </div>
             <div class="right-side">
-            <div class="ads-area">
-                
-            </div>
+            
             <div class="loading-cifra" id="loading-cifra">
                 <div class="loader">
                     <div class="loader-content"></div>
@@ -59,7 +57,32 @@
             </div>
             </div>
         </section>
-    </main>
+        <section class="other-area">
+            <div class="content">
+
+                <h1>Explicação sobre o formato ChordPro:</h1>
+                <p>O formato ChordPro é uma notação musical amplamente utilizada por músicos para representar acordes e letras de músicas de forma clara e concisa. Ele permite que músicos toquem suas músicas favoritas com facilidade, fornecendo acordes acima das palavras correspondentes. Aqui está um exemplo simples:</p>
+                
+                <p class="cipher-pro">
+                    {title: Exemplo de Música}<br>
+                    {artist: Artista Desconhecido}<br>
+                    {key: C}<br>
+                    [C] Esta é uma [Am] música de [F] exemplo,<br>
+                    [G] Com acordes [C] acima das [G7] palavras.<br>
+                </p>
+
+                <p>Com o ChordPro, você pode facilmente transpor acordes, criar anotações e personalizar suas cifras de acordo com suas preferências musicais. É uma ferramenta poderosa para músicos de todos os níveis de experiência.</p>
+
+                <h2>História e origem:</h2>
+                <p>O formato ChordPro foi criado por Martin Leclerc em meados dos anos 90. Ele desenvolveu essa notação musical para simplificar a representação de acordes em letras de músicas. O objetivo era tornar mais fácil para músicos de todos os níveis tocarem suas músicas favoritas.</p>
+                <p>Com o tempo, o ChordPro evoluiu e se tornou amplamente aceito na comunidade musical. Muitos aplicativos e programas agora suportam esse formato, tornando-o uma ferramenta essencial para músicos e entusiastas da música em todo o mundo.</p>
+            </div>
+
+        </section>
+        <div class="about-me">
+            <p>Feito por: <a href="https://pedrogustavodev.com.br" target="_blank" rel="noopener noreferrer">Pedro Gustavo</a></p>
+        </div>
+    </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="script.js"></script>
