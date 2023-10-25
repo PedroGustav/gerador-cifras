@@ -147,7 +147,18 @@ const titleValue = document.getElementsByClassName('cifra-title')[0];
 const authorValue = document.getElementsByClassName('cifra-author')[0];
 const tomValue = document.getElementsByClassName('cifra-tom')[0];
 const contentValue = document.getElementsByClassName('cifra_input')[0];
+contentValue.value = `[C]Esta é [Am]a [F]letra da [C]música de ex[F]emplo que estou u[Am]sando ,
+[Dm]Com [G7]alguns [C]acordes [F]simples, e de for[G]ma natu[C]ral.
 
+[C]Para deixar a nota no começo da [F]palavra, 
+é só colocar a [G]Notação antes [C]dela.
+
+e pa[C]ra colocar a nota no me[F]io, 
+basta inserir a no[G]tação antes da letra que dese[C]ja.
+
+[C]    Fique a vontade    [F] para usar es[G]paço...   [C]
+
+Espe[Dm]ro que [G]Seja útil pra vo[C]cê!`;
 // --> Área que é modificada a cada preenchimento do formulário
 const CifraTitle = document.getElementById('title');
 const CifraAuthor = document.getElementById('author');
@@ -158,11 +169,18 @@ const notas = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 let title = 'O título da sua cifra';
 let author = 'Autor';
 let tom = 'C';
-let cifraChordpro = `[C]Esta é [Am]a [F]letra da [C]música,
-[Dm]Com [G7]alguns [C]acordes [F]simples.
+let cifraChordpro = `[C]Esta é [Am]a [F]letra da [C]música de ex[F]emplo que estou u[Am]sando ,
+[Dm]Com [G7]alguns [C]acordes [F]simples, e de for[G]ma natu[C]ral.
 
-[C]Vamos [Am]tocar [F]juntos [Dm]agora,
-[Em]Com [Am]a [G7]melodia [C]suave.
+[C]Para deixar a nota no começo da [F]palavra, 
+é só colocar a [G]Notação antes [C]dela.
+
+e pa[C]ra colocar a nota no me[F]io, 
+basta inserir a no[G]tação antes da letra que dese[C]ja.
+
+[C]  Fique a vontade    [F] para usar es[G]paço...[C]
+
+Espe[Dm]ro que [G]Seja útil pra vo[C]cê!
 `;
 
 let cifraFormatada = formatarCifrasChordPro(cifraChordpro);
@@ -264,7 +282,7 @@ savePdfButton.addEventListener('click', function(){
   var pdfBlob = doc.output('blob');
   var pdfUrl = URL.createObjectURL(pdfBlob);
   savePdfButton.href = pdfUrl;
-  savePdfButton.download = `${titleValue.value}.pdf`
+  savePdfButton.download = `${title}.pdf`
 });
 
 increaseTonality.addEventListener('click', function(){

@@ -42,7 +42,7 @@
                 <h1>Gerador de Cifra</h1>
                 <p class="desc">
                     É simples, escreva sua cifra aqui em baixo no formato<br>
-                    ChordPro. e geraremos pra você logo aqui ao lado :)
+                    <a href="index.html#chordpro" style="color: #25AC8C;">ChordPro</a>. e geraremos pra você logo aqui ao lado :)
                 </p>
                 <div class="row">
                     <input type="text" class="cifra-title" placeholder="Título da música" required>
@@ -51,6 +51,7 @@
                 </div>
                 <textarea class="cifra_input" name="cifra" id="cifra" cols="30" rows="10" placeholder="Escreva sua cifra aqui.." required ></textarea>
                 <button class="submit-cifra" type="submit" id="submit-cifra">Gerar cifra</button>
+                <a href="#help" class="help">Como escrever Minha Cifra?</a>
             </form>
             <div class="right-side">
             
@@ -75,7 +76,7 @@
             </a>
             <!-- <a class="actions-cifra" id="copiar">
                 <img src="./assets/icons/copy.svg" alt="" srcset="">
-                Copiar Cifra
+                Copiar Cifra2
             </a> -->
     
             </div>
@@ -83,10 +84,10 @@
             </div>
             </div>
         </section>
-        <section class="other-area">
-            <div class="content">
+        <section class="other-area" id="chordpro">
+            <div class="content" >
 
-                <h1>Formato ChordPro:</h1>
+                <h1  style="padding-top: 80px;">Formato ChordPro:</h1>
                 <p>O formato ChordPro é uma notação musical amplamente utilizada por músicos para representar acordes e letras de músicas de forma clara e concisa. Ele permite que músicos toquem suas músicas favoritas com facilidade, fornecendo acordes acima das palavras correspondentes. Aqui está um exemplo simples:</p>
                 
                 <p class="cipher-pro">
@@ -102,7 +103,59 @@
                 <h2>História e origem:</h2>
                 <p>O formato ChordPro foi criado por Martin Leclerc em meados dos anos 90. Ele desenvolveu essa notação musical para simplificar a representação de acordes em letras de músicas. O objetivo era tornar mais fácil para músicos de todos os níveis tocarem suas músicas favoritas.</p>
                 <p>Com o tempo, o ChordPro evoluiu e se tornou amplamente aceito na comunidade musical. Muitos aplicativos e programas agora suportam esse formato, tornando-o uma ferramenta essencial para músicos e entusiastas da música em todo o mundo.</p>
+
+
+                <h1 id="help" style="padding-top: 80px;">Como escrever minha cifra?</h1>
+                <p>
+                    Como mencionado acima, o sistema utiliza como base o formato ChordPro. Diante disso, a posição da notação de cifra em relação a palavra determina o resultado final. Em geral, temos 3 casos mais comuns: A <b>notação no início da palavra</b>, a <b>notação no meio/dentro das palavras</b> e a <b>notação sem palavra abaixo.</b> 
+                </p>
+
+                <h1 style="font-size: 1.2rem;">- Notação no início da palavra</h1>
+                <p>É o caso onde o usuário deseja que a notação da cifra apareça logo no início da palavra, na primeira letra. Para alcançar esse resultado, o usuário deve inserir o caractere logo antes da primeira letra da palavra, sem espaço entre eles. </p>
+                <p><b>Por exemplo:</b></p>
+               
+                <p class="cipher-pro" style="white-space: pre !important;">
+                    [C]Esta é uma [Am]música de [F]exemplo<br>
+                </p>
+                <p>Esta entrada irá retornar essa cifra:</p>
+                <p class="cipher-pro" style="white-space: pre !important;">
+                    C          Am        F
+                    Esta é uma música de exemplo<br>
+                </p>
+
+                <h1 style="font-size: 1.2rem;">- Notação no meio da palavra</h1>
+                <p>Neste caso, a nota aparece dentro da palavra, não no início. É o caso mais comum, musicalmente falando. Para exibir com sucesso uma cifra dessa forma, o usuário deve inserir a notação em antes da letra que ele deseje que a cifra apareça após a conversão, Sem espaço antes ou depois dela.</p>
+                <p><b>Dica:</b> Geralmente, a nota sempre entra no começo da sílaba.</p>
+                <p><b>Por exemplo:</b></p>
+               
+                <p class="cipher-pro" style="white-space: pre !important;">
+                    Es[C]ta é uma mú[Am]sica de exem[F]plo<br>
+                </p>
+                <p>Esta entrada irá retornar essa cifra:</p>
+                <p class="cipher-pro" style="white-space: pre !important;">
+                      C          Am          F
+                    Esta é uma música de exemplo<br>
+                </p>
+
+                <h1 style="font-size: 1.2rem;">- Notação sem palavra abaixo</h1>
+                <p>este é o caso onde a nota aparece livre, sem nenhum texto abaixo, pode ser usado tanto nos espaços entre palavras, como antes ou depois de frases. Para obter esse resultado, basta colocar a nota separada do texto de acordo com o resultado que o usuário deseja.</p>
+                <p>
+                    Para as notas que ficam a esquerda das palavras, deve ser deixado o número de espaços desejados + 1. Ex: se quero 4 espaços, devo deixar 5 espaços entre a notação e a palavra.<br><br>
+                    No caso de notas a direita das palavras, acontece o oposto. Ex: se quero 4 espaços, devo deixar 4 espaços entre a palavra e a notação.<br><br>
+                    Para deixar a nota no espaço entre uma palavra e outra, basta adcionar um espaço a direita da notação.
+                </p>
+                <p><b>Por exemplo:</b></p>
+               
+                <p class="cipher-pro" style="white-space: pre !important;">
+                    [C]     Esta é uma música[Am] de exemplo   [F]<br>
+                </p>
+                <p>Esta entrada irá retornar essa cifra:</p>
+                <p class="cipher-pro" style="white-space: pre !important;">
+                   C                       Am             F
+                        Esta é uma   música de exemplo    <br>
+                </p>
             </div>
+
 
         </section>
         <div class="about-me">

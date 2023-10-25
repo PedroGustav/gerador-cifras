@@ -24,9 +24,12 @@
     background-color: #25AC8C;
     color: #fff;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     overflow-x: hidden;
+    
 }
 
 /* Responsivity Queries */
@@ -154,7 +157,7 @@ body{
     font-size: 1rem;
 }
 .cifra_input{
-    resize: vertical;
+    resize: none;
     padding: 16px;
     font-family: var(--primary-font);
     color: #3d3d3d;
@@ -178,12 +181,34 @@ body{
     border: none;
     outline: none;
     height: 50px;
-    margin-top: 40px;
+    margin-top: 30px;
     border-radius: 4px;
     box-shadow: 4px 1px 22px 5px rgba(93, 218, 188, 0.50);
     font-size: 1.25rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.help{
+    color: #25AC8C;
+    border: 2px solid #25AC8C;
+    border-radius: 4px;
+    font-weight: bold;
+    height: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+    /* box-shadow: 4px 1px 22px 5px rgba(0, 0, 0, 0.10); */
+    font-size: 1rem;
+
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 .submit-cifra:hover{
