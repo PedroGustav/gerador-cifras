@@ -28,6 +28,9 @@
 body{
     overflow-x: hidden;
 }
+
+/* Responsivity Queries */
+
 @media(max-width: 480px){
     html{
         font-size: 10px;
@@ -101,15 +104,13 @@ body{
     
 }
 .right-side{
-    background-color: #fff;
+    background-color: #25AC8C;
     display: flex;
     flex-direction: column;
     /* align-items:; */
     position: relative;
     /* overflow-y: auto; */
 }
-
-
 
 .left-side h1{
     font-size: var(--fz-5);
@@ -133,8 +134,11 @@ body{
 
 .row-actions-cifra{
     display: none;
-    flex: 1; 
-    margin-bottom: 1rem;
+    /* flex: 1;  */
+    padding-bottom: 1rem;
+    padding: 2rem;
+    background-color: #fff;
+
 }
 .cifra-title, .cifra-author, .cifra-tom{
     flex: 1;
@@ -192,11 +196,17 @@ body{
 #title{
     color: #1d1d1d;
     font-size: 1.75rem;
+    background-color: #fff;
+    padding-left: 2rem;
+    padding-top: 2rem;
 }
 
 #author{
     color: #25AC8C;
     font-size: 1.25rem;
+    background-color: #fff;
+    padding-left: 2rem;
+
 }
 
 
@@ -285,23 +295,49 @@ body{
 
 .right-side strong{
     color: #3d3d3d;
-    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
     /* margin-bottom: 2rem;     */
     font-size: 1.1rem;
+    background-color: #fff;
+
+    display: flex;
+    gap: 0.5rem;
 }
 
 
 .right-side strong b{
     color: #25AC8C;
+    
 }
 
+.modify-tonality{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #25AC8C;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 0px 20px 0px #25AC8C3F;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+
+.modify-tonality:hover{
+    background-color: #36BD9D;
+}
 
 .linha-cifra{
     color: #25AC8C !important;
     font-family: var(--monospaced-font);
     font-weight: bold;
     white-space: pre !important;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     
 }
 
@@ -310,14 +346,16 @@ body{
     font-family: var(--monospaced-font);
     margin-bottom: 0.5rem;
     white-space: pre !important;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     
 }
+
 @media(max-width:650px){
     .linha-letra, .linha-cifra{
         font-size: 1rem;
     }
 }
+
 .linha-letra::selection, .linha-cifra::selection{
     background-color: #25AC8C;
     color: #fff;
@@ -331,12 +369,12 @@ body{
 
 .cifra{
     display: block;
-    /* height: 100%; */
+    height: 100%;
     background-color: #FFF;
-    /* padding: 2rem; */
+    padding: 2rem;
     color: #25AC8C;
     white-space: pre;
-    max-height: 500px;
+    /* max-height: 500px; */
     overflow-y: auto;
 }
 
@@ -358,6 +396,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 .actions-cifra img{
